@@ -1,0 +1,10 @@
+function camelize(str) {
+  return str
+    .split("-")
+    .map((item, index) =>
+      index === 0 ? item : item.charAt(0).toUpperCase() + item.slice(1),
+    )
+    .join("");
+}
+
+alert(camelize("border-left-width"));
